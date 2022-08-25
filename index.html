@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do Shopping</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
+          </label>
+          <ul
+            tabindex="0"
+            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a>Homepage</a></li>
+            <li><a>Categories</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a class="text-xl font-semibold text-primary">AweSomeMart</a>
+      </div>
+      <div class="navbar-end">
+        <button class="btn btn-ghost btn-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </button>
+        <button class="btn btn-ghost btn-circle">
+          <div class="indicator">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              />
+            </svg>
+            <span class="badge badge-xs badge-primary indicator-item"></span>
+          </div>
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="grid grid-cols-2 w-5/6 mx-auto gap-24">
+        <div id="cards" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <!-- single card -->
+          <div class="card shadow">
+            <figure class="h-52">
+              <img
+                class="object-cover w-full h-full"
+                src="https://images.unsplash.com/photo-1611077544637-f826625c2776?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=940&q=80"
+                alt="car!"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Stylish Pen</h2>
+              <p>An accessory that accelerate your life</p>
+              <div class="card-actions justify-end">
+                <span class="font-bold text-warning text-xl"
+                  >$<span class="price">10</span></span
+                >
+                <button class="btn btn-primary w-full">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card shadow">
+            <figure class="h-52">
+              <img
+                class="object-cover w-full h-full"
+                src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="car!"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Stylish Pen</h2>
+              <p>An accessory that accelerate your life</p>
+              <div class="card-actions justify-end">
+                <span class="font-bold text-warning text-xl"
+                  >$<span class="price">10</span></span
+                >
+                <button class="btn btn-primary w-full">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card shadow">
+            <figure class="h-52">
+              <img
+                class="object-cover w-full h-full"
+                src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                alt="car!"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Stylish Pen</h2>
+              <p>An accessory that accelerate your life</p>
+              <div class="card-actions justify-end">
+                <span class="font-bold text-warning text-xl"
+                  >$<span class="price">10</span></span
+                >
+                <button class="btn btn-primary w-full">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card shadow">
+            <figure class="h-52">
+              <img
+                class="object-cover w-full h-full"
+                src="https://images.unsplash.com/photo-1595584354232-f07d525d87c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt="car!"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Stylish Pen</h2>
+              <p>An accessory that accelerate your life</p>
+              <div class="card-actions justify-end">
+                <span class="font-bold text-warning text-xl"
+                  >$<span class="price">10</span></span
+                >
+                <button class="btn btn-primary w-full">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card shadow">
+            <figure class="h-52">
+              <img
+                class="object-cover w-full h-full"
+                src="https://images.unsplash.com/photo-1591028666702-f1264db7260d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt="car!"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Stylish Pen</h2>
+              <p>An accessory that accelerate your life</p>
+              <div class="card-actions justify-end">
+                <span class="font-bold text-warning text-xl"
+                  >$<span class="price">10</span></span
+                >
+                <button class="btn btn-primary w-full">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card shadow">
+            <figure class="h-52">
+              <img
+                class="object-cover w-full h-full"
+                src="https://images.unsplash.com/photo-1617620188695-e515d56025a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
+                alt="car!"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Stylish Pen</h2>
+              <p>An accessory that accelerate your life</p>
+              <div class="card-actions justify-end">
+                <span class="font-bold text-warning text-xl"
+                  >$<span class="price">10</span></span
+                >
+                <button class="btn btn-primary w-full">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h1 class="text-4xl text-center font-medium tracking-wider">
+            <span id="no-of-product" class="text-error">No</span> product added
+            to the cart
+          </h1>
+          <div class="overflow-x-auto">
+            <table class="table table-zebra w-full">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Product name</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
