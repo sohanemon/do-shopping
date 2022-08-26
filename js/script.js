@@ -32,6 +32,7 @@ card.addEventListener("click", (e) => {
       totalProduct += parseInt(child.querySelector(".count").innerText);
     }
     noOfProduct.innerText = totalProduct;
+    calculateTotal();
   }
 });
 
@@ -50,9 +51,17 @@ const createElement = (img, title, price) => {
               <div class="font-bold text-xl ">${title.innerText} <span  class='text-base text-primary'>x<span class= 'count'>1</span></span></div>      
           </div>
         </td>
-        <td class= 'text-2xl text-warning font-extrabold tracking-widest'>$<span class= 'price'>${price.innerText}</span>
+        <td class= 'text-2xl text-warning font-medium tracking-widest'>$<span class= 'price'>${price.innerText}</span>
         </td>
       </tr>
     `;
   tbody?.appendChild(tr);
+};
+const calculateTotal = () => {
+  let total = 0;
+  let all = tbody.querySelectorAll(".price");
+  all.forEach((e) => {
+    total += parseInt(e.innerText);
+  });
+  document.getElementById("total").innerText = total;
 };
