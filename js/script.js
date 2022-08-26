@@ -7,9 +7,31 @@ card.addEventListener("click", (e) => {
     const img = card.querySelector("img");
     const title = card.querySelector(".card-title");
     const price = card.querySelector(".price");
-    console.dir(img);
-    createElement(img, title, price);
-    noOfProduct.innerText = tbody.childElementCount;
+    let isMatched = false;
+    let matchedItem,
+      items,
+      totalProduct = 0;
+    if (tbody.childElementCount > 0) {
+      for (let child of tbody.children) {
+        if (child.querySelector("img").src === img.src) {
+          isMatched = true;
+          matchedItem = child;
+        }
+      }
+      if (isMatched) {
+        items = parseInt(matchedItem.querySelector(".count").innerText);
+        matchedItem.querySelector(".count").innerText = items += 1;
+        // console.log(matchedItem.querySelector(".price")
+        matchedItem.querySelector(".price").innerText =
+          items * parseInt(price.innerText);
+      } else createElement(img, title, price);
+    } else {
+      createElement(img, title, price);
+    }
+    for (child of tbody.children) {
+      totalProduct += parseInt(child.querySelector(".count").innerText);
+    }
+    noOfProduct.innerText = totalProduct;
   }
 });
 
@@ -24,18 +46,13 @@ const createElement = (img, title, price) => {
           <div class="flex items-center space-x-3">
             <div class="avatar ">
                 <img  class=' h-32 w-32 rounded-lg shadow-xl' src = '${img.src}' />
-
             </div>
-        
-              <div class="font-bold text-xl ">${title.innerText}</div>
-        
+              <div class="font-bold text-xl ">${title.innerText} <span  class='text-base text-primary'>x<span class= 'count'>1</span></span></div>      
           </div>
         </td>
-        <td class= 'text-2xl text-warning font-extrabold tracking-widest'>$${price.innerText}
+        <td class= 'text-2xl text-warning font-extrabold tracking-widest'>$<span class= 'price'>${price.innerText}</span>
         </td>
-     
       </tr>
     `;
-  console.log(tbody);
   tbody?.appendChild(tr);
 };
